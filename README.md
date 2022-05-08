@@ -11,3 +11,10 @@ for i in range(50):
     
 // how to import specific functions
     from cs50 import get_string, get_float, ect.
+
+//blurring an image
+from PIL inport Image, ImagFilter
+
+before = Image.open("bridge.bmp")
+after = before.filter(ImageFilter.BoxBlur(10))
+after.save("out.bmp")
