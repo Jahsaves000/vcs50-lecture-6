@@ -210,16 +210,65 @@ average = sum(scores) / len(scores)
 print(f"Average: {average}")
 
 
+uppercase.py
+
+from cs50 import get_string
+
+s = get_string("Before: ")
+print("After: ", end="")
+print(s.upper())
+
+//another variation
+
+from cs50 import get_string
+
+s = get_string("Before: ")
+print("After: ", end="")
+for c in s:
+    print(c.upper(), end="")
+print()
+
+
+argv.py
+
+from sys import argv //this is new
+
+if len(argv) == 2:
+    print(f"hello, {argv[1]}")
+else:
+    print("Hello, world")
+    
+another variation
+
+from sys import argv
+
+for arg in argv:
+    print(arg, end="")
+print()
+
+
+exit.py
+
+import sys
+
+if len(sys.argv) != 2:
+    print("Missing command-line argument")
+    sys.exit(1)
+    
+print(f"hello, {sys.argv[1]}")
+sys.exit(0)
 
 
 
+names.py
 
 
+names = ["Bill", "Charlie", "Fred", "George", "Ginny", "Percy", "Ron"]
 
-
-
-
-
+if "Ron" in names:
+    print("found")
+else:
+    print("Not found")
 
 
 
